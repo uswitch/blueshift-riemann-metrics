@@ -7,8 +7,8 @@
            [java.net InetSocketAddress]))
 
 (defn- riemann-client [host port]
-  (info "Creating RiemannClient, connecting with UDP to" host port)
-  (RiemannClient/udp (InetSocketAddress. host port)))
+  (info "Creating RiemannClient, connecting to" host port)
+  (RiemannClient/tcp (InetSocketAddress. host port)))
 
 (defn- reporter [riemann-client registry]
   (.build (RiemannReporter/forRegistry registry)

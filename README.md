@@ -4,7 +4,7 @@
 
 ## Usage
 
-Coming soon...
+Assuming you've already got an Uberjar built for Blueshift you just need to build an uberjar, add it to your classpath and add a reporter to the telemetry section of Blueshift's configuration; [Blueshift's README](https://github.com/uswitch/blueshift/blob/master/README.md) has a bit more info on how to do this.
 
 ## Authors
 

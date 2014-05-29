@@ -4,11 +4,17 @@
 
 ## Usage
 
-Assuming you've already got an Uberjar built for Blueshift you just need to build an uberjar, add it to your classpath and add a reporter to the telemetry section of Blueshift's configuration; [Blueshift's README](https://github.com/uswitch/blueshift/blob/master/README.md) has a bit more info on how to do this.
+Assuming you've already got an Uberjar built for Blueshift you just need to build the metrics uberjar and add it to Blueshift's classpath.
+
+To configure the reporter add the following to Blueshift's configuration file:
+
+    :telemetry {:reporters [uswitch.blueshift.telemetry.riemann/riemann-metrics-reporter]}
+    :riemann {:host "localhost"
+             :port 5555}
 
 ## Authors
 
-* [Paul Ingles](https://github.com/pingles) ([@pingles](http://twitter.com/pingles)
+* [Paul Ingles](https://github.com/pingles) ([@pingles](http://twitter.com/pingles))
 
 ## License
 
